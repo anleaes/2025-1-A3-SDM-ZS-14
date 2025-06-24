@@ -7,3 +7,6 @@ class Vacina(models.Model):
     descricao = models.CharField(max_length= 200)
     fabricante = models.CharField(max_length= 100)
     doses_recomendadas = models.IntegerField()
+
+    def __str__(self):
+        return f'{self.nome} - {self.fabricante}'
