@@ -11,3 +11,5 @@ db.sqlite3
 /medicos/migrations/*
 /unidades_saude/__pycache__/*
 /unidades_saude/migrations/*
+/estoques_vacina/__pycache__/*
+/estoques_vacina/migrations/*
