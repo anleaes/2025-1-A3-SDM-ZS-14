@@ -1,0 +1,89 @@
+@startuml VacinaApp
+
+skinparam classAttributeIconSize 0
+
+class Usuario {
+  -cpf: string
+  -nome: string
+  -data_nascimento: date
+  -sexo: string
+  -email: string
+  -telefone: string
+}
+
+class Medico extends Usuario {
+  -registro_profissional: string
+  -especialidade: string
+}
+
+class Vacina {
+  -nome: string
+  -descricao: string
+  -fabricante: string
+  -doses_recomendadas: int
+}
+
+class UnidadeSaude {
+  -nome: string
+  -endereco: string
+  -telefone: string
+}
+
+class EstoqueVacina {
+  -quantidade_disponsivel: decimal
+  ' Relações
+  -vacina: Vacina
+  -unidade: UnidadeSaude
+}
+
+class Agendamento {
+  -data_hora: datetime
+  -status: string
+  ' Relações
+  -usuario: Usuario
+  -vacina: Vacina
+  -unidade: UnidadeSaude
+}
+
+class AplicacaoVacina {
+  -data_aplicacao: date
+  -dose: int
+  ' Relações
+  -medico: Medico
+  -usuario: Usuario
+  -vacina: Vacina
+  -unidade: UnidadeSaude
+}
+
+class CampanhaVacinal {
+  -nome: string
+  -descricao: string
+  -data_inicio: date
+  -data_fim: date
+}
+
+' Tabela de Ligação (through table)
+class CampanhaVacinalVacina {
+  ' Relações
+  -campanha: CampanhaVacinal
+  -vacina: Vacina
+}
+
+' Relacionamentos (Foreign Keys)
+Agendamento "1" -- "N" Usuario
+Agendamento "1" -- "N" Vacina
+Agendamento "1" -- "N" UnidadeSaude
+
+AplicacaoVacina "1" -- "N" Medico
+AplicacaoVacina "1" -- "N" Usuario
+AplicacaoVacina "1" -- "N" Vacina
+AplicacaoVacina "1" -- "N" UnidadeSaude
+
+EstoqueVacina "1" -- "N" Vacina
+EstoqueVacina "1" -- "N" UnidadeSaude
+
+' Relacionamento Many-to-Many através da tabela de ligação
+CampanhaVacinal "1" -- "0..N" CampanhaVacinalVacina
+Vacina "1" -- "0..N" CampanhaVacinalVacina
+
+@enduml
