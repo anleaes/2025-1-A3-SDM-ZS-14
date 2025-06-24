@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-26%&cvwem!q*pz79x1mdo)y$v+uu6-ea^3-8d8+-1+6&=wa#5q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,9 +37,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'vacinas',
+    'usuarios',
+    'medicos',
+    'aplicacoes_vacinais',
+    'unidades_saude',
+    'estoques_vacina',
+    'agendamentos',
+    'campanhas_vacinais',
+    'campanha_vacinal_vacina',
+    'corsheaders',
 ]
 
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -48,6 +61,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 ROOT_URLCONF = 'sistema_vacinacao.urls'
 
