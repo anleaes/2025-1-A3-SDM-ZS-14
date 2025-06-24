@@ -1,1 +1,5 @@
 /env
+
+/sistema_vacinacao/__pycache__/*
+/vacinas/__pycache__/*
+/vacinas/migrations/*
