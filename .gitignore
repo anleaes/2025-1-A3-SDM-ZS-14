@@ -5,3 +5,5 @@
 /vacinas/migrations/*
 /usuarios/__pycache__/*
 /usuarios/migrations/*
+/medicos/__pycache__/*
+/medicos/migrations/*
