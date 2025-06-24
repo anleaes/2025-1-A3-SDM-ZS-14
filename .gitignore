@@ -1,7 +1,13 @@
 /env
 
+db.sqlite3
+
 /sistema_vacinacao/__pycache__/*
 /vacinas/__pycache__/*
 /vacinas/migrations/*
 /usuarios/__pycache__/*
 /usuarios/migrations/*
+/medicos/__pycache__/*
+/medicos/migrations/*
+/unidades_saude/__pycache__/*
+/unidades_saude/migrations/*
