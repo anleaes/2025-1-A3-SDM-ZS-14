@@ -13,3 +13,6 @@ db.sqlite3
 /unidades_saude/migrations/*
 /estoques_vacina/__pycache__/*
 /estoques_vacina/migrations/*
+/aplicacoes_vacinais/__pycache__/*
+/aplicacoes_vacinais/migrations/*
+
