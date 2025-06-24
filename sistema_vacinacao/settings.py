@@ -41,12 +41,6 @@ INSTALLED_APPS = [
     'vacinas',
     'usuarios',
     'medicos',
-    'aplicacoes_vacinais',
-    'unidades_saude',
-    'estoques_vacina',
-    'agendamentos',
-    'campanhas_vacinais',
-    'campanha_vacinal_vacina',
     'corsheaders',
 ]
 
