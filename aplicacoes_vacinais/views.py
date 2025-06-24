@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import AplicacaoVacina
+from .serializers import AplicacaoVacinaSerializer
 
-# Create your views here.
+class AplicacaoVacinaViewSet(viewsets.ModelViewSet):
+    queryset = AplicacaoVacina.objects.all()
+    serializer_class = AplicacaoVacinaSerializer
