@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'aplicacoes_vacinais',
     'campanhas_vacinais',
     'campanha_vacinal_vacina',
+    'agendamentos',
     'corsheaders',
 ]
 

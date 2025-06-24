@@ -19,3 +19,5 @@ db.sqlite3
 /campanhas_vacinais/migrations/*
 /campanha_vacinal_vacina/__pycache__/*
 /campanha_vacinal_vacina/migrations/*
+/agendamentos/__pycache__/*
+/agendamentos/migrations/*
