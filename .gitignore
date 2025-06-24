@@ -3,3 +3,5 @@
 /sistema_vacinacao/__pycache__/*
 /vacinas/__pycache__/*
 /vacinas/migrations/*
+/usuarios/__pycache__/*
+/usuarios/migrations/*
