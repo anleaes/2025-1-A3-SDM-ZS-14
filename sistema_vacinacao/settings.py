@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'usuarios',
     'medicos',
     'unidades_saude',
+    'estoques_vacina',
     'corsheaders',
 ]
 
